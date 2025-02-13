@@ -1,0 +1,209 @@
+/* Genel Stil */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradyan arka plan */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil etmek için */
+}
+
+/* Navbar'ın sabit olması için */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;  /* Navbar'ın arka plan rengi */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;  /* Navbar'ın diğer öğelerin üstünde görünmesini sağlar */
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Sayfa içeriğini navbar'ın altına yerleştirmek için */
+body {
+    margin-top: 60px;  /* Navbar yüksekliği kadar üstten boşluk bırakılır */
+}
+
+/* Başlık Stil */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Tablo Stil */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Form Alanları */
+form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil etmek için */
+}
+
+input[type="text"], input[type="number"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil etmek için */
+}
+
+input[type="submit"] {
+    background-color: #2575fc;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a11cb;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+  
+  .wrapper {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 800px;
+  }
+  
+  .table {
+    margin: 0 0 40px 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: table;
+  }
+  
+  @media screen and (max-width: 580px) {
+    .table {
+      display: block;
+    }
+  }
+  
+  .row {
+    display: table-row;
+    background: #f6f6f6;
+  }
+  
+  .row:nth-of-type(odd) {
+    background: #e9e9e9;
+  }
+  
+  .row.header {
+    font-weight: 900;
+    color: #ffffff;
+    background: #ea6153;
+  }
+  
+  .row.green {
+    background: #27ae60;
+  }
+  
+  .row.blue {
+    background: #2980b9;
+  }
+  
+  @media screen and (max-width: 580px) {
+    .row {
+      padding: 14px 0 7px;
+      display: block;
+    }
+  
+    .row.header {
+      padding: 0;
+      height: 6px;
+    }
+  
+    .row.header .cell {
+      display: none;
+    }
+  
+    .row .cell {
+      margin-bottom: 10px;
+    }
+  
+    .row .cell:before {
+      margin-bottom: 3px;
+      content: attr(data-title);
+      min-width: 98px;
+      font-size: 10px;
+      line-height: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #969696;
+      display: block;
+    }
+  }
+  
+  .cell {
+    padding: 6px 12px;
+    display: table-cell;
+  }
+  
+  @media screen and (max-width: 580px) {
+    .cell {
+      padding: 2px 16px;
+      display: block;
+    }
+  }
+  
